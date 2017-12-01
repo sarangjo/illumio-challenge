@@ -115,10 +115,6 @@
     <ClCompile Include="NatProcessor.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="FLOW" />
-    <Text Include="NAT" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>

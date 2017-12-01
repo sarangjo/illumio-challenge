@@ -18,6 +18,8 @@ int split(string s, char delim, string &left, string &right) {
 	}
 	left = s.substr(0, delim_index);
 	right = s.substr(delim_index + 1);
+
+	return 0;
 }
 
 // Handles processing for a single line from the NAT input file.
@@ -62,7 +64,7 @@ void NatProcessor::handleFlowLine(string line) {
 		return;
 	}
 
-	// If not, check possible wildcard matches
+	// If not, check possible wildcard matches, in decreasing order of specificity
 	string ip, port;
 	split(line, ':', ip, port);
 
@@ -79,7 +81,7 @@ void NatProcessor::handleFlowLine(string line) {
 	this->output << "No nat match for " << line << endl;
 }
 
-// Reads a particular file, calling `handler` on each line
+// Reads a given file, calling `handler` on each line
 void NatProcessor::readFile(string filename, void(NatProcessor::*handler)(string)) {
 	string line;
 	ifstream inputfile(filename);
