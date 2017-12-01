@@ -1,8 +1,8 @@
 # NatProcessor
 
-> Sarang Joshi
-> sarangj@cs.uw.edu
-> Illumio Coding Challenge November 2017
+*Sarang Joshi*
+*sarangj@cs.uw.edu*
+*Illumio Coding Challenge November 2017*
 
 ## Usage
 
